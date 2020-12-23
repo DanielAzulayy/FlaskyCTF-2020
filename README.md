@@ -5,3 +5,4 @@ Created a CTF for students.
 The goal was to exploit a SSTI vulnerability in order to gain access to the server by reading the SSH keys of the server.
 The LPE part was based on a SUID file.
 
+Wirte Up soon!

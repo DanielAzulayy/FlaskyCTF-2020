@@ -1,0 +1,49 @@
+{% extends "layout.jinja2" %}
+
+{% block pagestyles %}
+<link href="{{ url_for('static', filename='css/account.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="form-wrapper">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+  <h1>Log in - Eatery Cafe</h1>
+  <form method="POST" action="/Management/login_form/admin_login_v2/login">
+    {{ form.csrf_token }}
+    <fieldset class="email">
+      {{ form.email.label }}
+      {{ form.email(placeholder='example@eatery.co.il') }}
+      {% if form.email.errors %}
+      <ul class="errors">
+        {% for error in form.email.errors %}
+        <li>{{ error }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </fieldset>
+
+    <fieldset class="password">
+      {{ form.password.label }}
+      {{ form.password }}
+      {% if form.email.errors %}
+      <ul class="errors">
+        {% for error in form.password.errors %}
+        <li>{{ error }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </fieldset>
+
+    <div class="submit-button">
+      {{ form.submit }}
+    </div>
+    
+    <div class="login-signup">
+      <p><span><a href="{{ url_for('main_bp.signup') }}">Don't have an account?</a></span></p>
+    </div>
+  </form>
+</div>
+{% endblock %}

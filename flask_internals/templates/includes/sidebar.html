@@ -1,0 +1,69 @@
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a target="_blank" rel="sponsored noopener noreferrer" 
+             href="https://appseed.us/admin-dashboards/flask-dashboard-black" class="simple-text logo-mini">
+            LG
+          </a>
+          <a target="_blank" rel="sponsored noopener noreferrer" 
+             href="https://appseed.us/admin-dashboards/flask-dashboard-black" class="simple-text logo-normal">
+            Admin Menu
+          </a>
+        </div>
+
+        <ul class="nav">
+          {% if current_user.is_authenticated %}
+          <li class="{% if 'index' in segment %} active {% endif %}">
+            <a href="/Management/login_form/admin_login_v2/dashboard/index.html">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="{% if 'icons' in segment %} active {% endif %}">
+            <a href="/Management/login_form/admin_login_v2/dashboard/ui-icons.html">
+              <i class="tim-icons icon-atom"></i>
+              <p>Icons</p>
+            </a>
+          </li>
+          <li class="{% if 'maps' in segment %} active {% endif %}">
+            <a href="/Management/login_form/admin_login_v2/dashboard/ui-maps.html">
+              <i class="tim-icons icon-pin"></i>
+              <p>Maps</p>
+            </a>
+          </li>
+          <li class="{% if 'notifications' in segment %} active {% endif %}">
+            <a href="/Management/login_form/admin_login_v2/dashboard/ui-notifications.html">
+              <i class="tim-icons icon-bell-55"></i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li class="{% if 'page-user' in segment %} active {% endif %}">
+            <a href="/Management/login_form/admin_login_v2/dashboard/page-user.html">
+              <i class="tim-icons icon-single-02"></i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li class="{% if 'register' in segment %} active {% endif %}">
+            <a href="/Management/login_form/admin_login_v2/dashboard/register?register=" >
+              <i class="tim-icons icon-user-run"></i>
+              <p>Register</p>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url_for('main_bp.logout') }}" >
+              <i class="tim-icons icon-button-power"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+          {% else %}
+          <li class="active">
+            <a target="_blank" 
+               href="https://appseed.us/admin-dashboards/flask-dashboard-black-pro">
+              <i class="tim-icons icon-spaceship"></i>            
+            </a>
+          </li>   
+          {% endif %}
+        </ul>
+        
+      </div>
+    </div>

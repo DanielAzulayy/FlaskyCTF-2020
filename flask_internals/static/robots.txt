@@ -1,0 +1,51 @@
+# http://www.robotstxt.org/robotstxt.html
+
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+Disallow: /CHANGELOG.txt
+Disallow: /cron.php
+
+Disallow: /INSTALL.mysql.txt
+Disallow: /INSTALL.pgsql.txt
+Disallow: /INSTALL.sqlite.txt
+
+Allow: /profiles/*.jpg
+Allow: /profiles/*.jpeg
+Allow: /profiles/*.png
+
+Disallow: /search/
+Disallow: /user/login/
+Disallow: /user/logout/
+Disallow: /?q=admin/
+Disallow: /?q=search/
+Disallow: /todo.txt
+Disallow: /?q=user/password/
+Disallow: /?q=user/register/
+Disallow: /?q=user/login/
+Disallow: /jobs/cv/sign-up-and-create
+Disallow: /jobs/n/*
+Disallow: /jobs/a/*
+Disallow: /jobs/apply/*
+Disallow: /secret.txt
+Disallow: /jobs/companies/n/*
+Disallow: /jobs/companies/a/*
+Disallow: /jobs/*/more-jobs-count
+Disallow: /?q=user/logout

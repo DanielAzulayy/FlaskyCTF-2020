@@ -1,0 +1,7 @@
+lib/
+logs/
+__pycache__/
+.vscode/
+.vscode
+bin/
+pynenv.cfg

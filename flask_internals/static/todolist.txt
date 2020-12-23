@@ -1,0 +1,13 @@
+
+TODO list:
+
+    1). Finish with development environment - Done 
+
+    2). Test login page (development environment) - Done
+
+    3). Upload to production environment - Done
+
+    4). Remove login page from production environment (it was used for testing only) - Pending
+
+
+
